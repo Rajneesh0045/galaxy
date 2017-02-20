@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Schedule</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'" async>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet" async>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+  </head>
+  <body>
+    <div class="stars">
+      <div class="planet5"><img src="images/Neptune_blurred.png" alt="planet"></div>
+      <div class="planet2"><img src="images/blurred planet.png" alt="planet"></div>
+      <div class="star1"></div>
+      <div class="star2"></div>
+      <div class="star3"></div>
+      <div class="planet1"><img src="images/small-blur2.png" alt="planet"></div>
+      <div class="planet3"><img src="images/rock1.png" alt="planet"></div>
+      <div class="planet4"><img src="images/jupiter.png" alt="planet"></div>
+
+    <div class="schedule">
+      <div class="day-1">
+        <div class="wrap1 am9">
+          <time>09:00 AM<i class="fa fa-clock-o" aria-hidden="true"></i></time>
+          <event>Inaguration<i class="fa fa-calendar-times-o" aria-hidden="true"></i></event>
+          <place>Main Stage<i class="fa fa-map-marker" aria-hidden="true"></i></place>
+        </div>
+        <div class="wrap1 am10">
+          <time>09:00 AM<i class="fa fa-clock-o" aria-hidden="true"></i></time>
+          <event>Inaguration<i class="fa fa-calendar-times-o" aria-hidden="true"></i></event>
+          <place>Main Stage<i class="fa fa-map-marker" aria-hidden="true"></i></place>
+        </div>
+        <div class="wrap1 am11">
+          <time>09:00 AM<i class="fa fa-clock-o" aria-hidden="true"></i></time>
+          <event>Inaguration<i class="fa fa-calendar-times-o" aria-hidden="true"></i></event>
+          <place>Main Stage<i class="fa fa-map-marker" aria-hidden="true"></i></place>
+        </div>
+        <div class="wrap1 am12">
+          <time>09:00 AM<i class="fa fa-clock-o" aria-hidden="true"></i></time>
+          <event>Inaguration<i class="fa fa-calendar-times-o" aria-hidden="true"></i></event>
+          <place>Main Stage<i class="fa fa-map-marker" aria-hidden="true"></i></place>
+        </div>
+        <div class="wrap1 am13">
+          <time>09:00 AM<i class="fa fa-clock-o" aria-hidden="true"></i></time>
+          <event>Inaguration<i class="fa fa-calendar-times-o" aria-hidden="true"></i></event>
+          <place>Main Stage<i class="fa fa-map-marker" aria-hidden="true"></i></place>
+        </div>
+      </div>
+      <hr>
+      <div class="day-2">
+        <div class="wrap2">
+          <time><i class="fa fa-clock-o" aria-hidden="true"></i>09:00 AM</time>
+          <event><i class="fa fa-calendar-times-o" aria-hidden="true"></i>Inaguration</event>
+          <place><i class="fa fa-map-marker" aria-hidden="true"></i>Main Stage</place>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+    $(window).scroll(function(){
+
+    var wScroll = $(this).scrollTop();
+
+    if( wScroll > $('.stars').offset().top ){
+      console.log(wScroll);
+        $('.star1').css({'background-position' : 'center -'+ wScroll/8 +'px'});
+        $('.star2').css({'background-position' : 'center -'+ wScroll/16 +'px'});
+        $('.star3').css({'background-position' : 'center -'+ wScroll/24 +'px'});
+
+        $('.planet1').css({'top': ''+ (500 + wScroll/1.5) +'px'});
+        $('.planet2').css({'top': ''+ (300 + wScroll/1.1) +'px'});
+        $('.planet3').css({'top': ''+ (1000 + wScroll/3.5) +'px'});
+        $('.planet4').css({'top': ''+ (1000 + wScroll/1.5) +'px'});
+        $('.planet5').css({'top': ''+ (100 + wScroll/1.04) +'px'});
+        }
+  });
+    </script>
+  </body>
+</html>
